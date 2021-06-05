@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{%block content%}
+    <h1>Hi {{request.user.username}}</h1>
+    <span>i dey lagos</span>
+    {% for post in posts%}
+        <p>{{post.title}}</p>
+        <p>{{post.author}} said {{post.content}} on {{post.date_posted|date:"F d, Y"}}</p>
+        <hr>
+    {%endfor%}
+{%endblock content%}
