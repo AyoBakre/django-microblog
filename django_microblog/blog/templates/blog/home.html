@@ -4,7 +4,10 @@
     <span>i dey lagos</span>
     {% for post in posts%}
         <p>{{post.title}}</p>
-        <p>{{post.author}} said {{post.content}} on {{post.date_posted|date:"F d, Y"}}</p>
+        <img src="{{post.author.profile.image.url}}" alt="" class="rounded-circle" width='50px'>
+       <p>{{post.author}} said {{post.content}} on {{post.date_posted|date:"F d, Y"}}</p>
+        
         <hr>
+        
     {%endfor%}
 {%endblock content%}
